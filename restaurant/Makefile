@@ -10,13 +10,13 @@ OBJ = $(OBJ_DIR)/main.o $(OBJ_DIR)/dish.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/console_v
 EXEC = $(BIN_DIR)/restaurant.exe
 
 $(EXEC): $(OBJ)
-    $(CC) $(OBJ) -o $(EXEC)
+	$(CC) $(OBJ) -o $(EXEC)
 
 $(OBJ_DIR)/%.o: %.c
-    mkdir -p $(OBJ_DIR)
-    $(CC) $(CFLAGS) -c $< -o $@
+	mkdir -p $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-    rm -rf $(OBJ_DIR) $(BIN_DIR)ыы
+	rm -rf $(OBJ_DIR) $(BIN_DIR)
