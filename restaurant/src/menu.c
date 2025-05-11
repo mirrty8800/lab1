@@ -11,4 +11,4 @@ void addDish(Menu *menu, Dish dish) {
 Dish* getMenuItems(Menu *menu, int *size) {
     *size = menu->count;
     return menu->dishes;
-}ы
+}

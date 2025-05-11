@@ -3,6 +3,7 @@
 #include "console_view.h"
 
 #include <stdio.h>
+#include "console_view.h"
 
 void runRestaurant() {
     Menu menu;
@@ -20,4 +21,4 @@ void runRestaurant() {
 
     ConsoleView view;
     displayMenu(&menu);
-}
+} 

@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -g
 
-SRC_DIR = .
+SRC_DIR = src
 OBJ_DIR = obj
 BIN_DIR = bin
 
@@ -12,11 +12,11 @@ EXEC = $(BIN_DIR)/restaurant.exe
 $(EXEC): $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC)
 
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
+	rm -rf $(OBJ_DIR) $(BIN_DIR)            
